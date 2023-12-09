@@ -1,0 +1,106 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "userId",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "height",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "weight",
+				"type": "uint256"
+			}
+		],
+		"name": "MoreUserDetails",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "heartRate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "steps",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sleepDuration",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct LoomGroom.DailyReading",
+				"name": "_details",
+				"type": "tuple"
+			}
+		],
+		"name": "updateDailyReading",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "height",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "weight",
+				"type": "uint256"
+			}
+		],
+		"name": "updateState",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "userId",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "heartRate",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "steps",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "sleepDuration",
+				"type": "uint256"
+			}
+		],
+		"name": "UserDetails",
+		"type": "event"
+	}
+]
