@@ -8,43 +8,6 @@ from pydantic import BaseModel
 from pydantic import Field
 
 
-class TxLogsModel(BaseModel):
-    logIndex: str
-    blockNumber: str
-    blockHash: str
-    transactionHash: str
-    transactionIndex: str
-    address: str
-    data: str
-    topics: List[str]
-
-
-
-
-class PowerloomSnapshotProcessMessage(EpochBase):
-    data_source: Optional[str] = None
-    primary_data_source: Optional[str] = None
-    genesis: Optional[bool] = False
-    bulk_mode: Optional[bool] = False
-
-
-
-class EthTransactionReceipt(BaseModel):
-    transactionHash: str
-    transactionIndex: str
-    blockHash: str
-    blockNumber: str
-    from_field: str = Field(..., alias='from')
-    to: Optional[str]
-    cumulativeGasUsed: str
-    gasUsed: str
-    effectiveGasPrice: str
-    logs: List[TxLogsModel]
-    contractAddress: Optional[str] = None
-    logsBloom: str
-    status: str
-    type: Optional[str]
-    root: Optional[str]
 class DailyReading(BaseModel):
     heartRate: int
     steps: int
