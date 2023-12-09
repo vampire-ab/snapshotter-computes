@@ -3,6 +3,7 @@ from typing import List
 from typing import Tuple
 from typing import Union
 
+import time
 from redis import asyncio as aioredis
 
 from .utils.event_log_decoder import EventLogDecoder
@@ -82,6 +83,9 @@ class TrackingContractInteractionProcessor(GenericProcessorSnapshot):
                         pass
         
         snapshot = UserDetailsSnapshot(
-            activities=processed_logs
+            activities=processed_logs,
+            contract=contract_address,
+            chainHeightRange = {"begin": min_chain_height, "end": max_chain_height},
+            timestamp=int(time.time())
         )       
         return snapshot
